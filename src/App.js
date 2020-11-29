@@ -5,7 +5,8 @@ import { Widget, addResponseMessage, toggleWidget } from 'react-chat-widget';
 import 'react-chat-widget/lib/styles.css';
 
 function App() {
-    const [fullScreenMode, setFullScreenMode] = useState(false);
+
+    const host = window.location.href.startsWith('http://localhost') ? 'http://localhost:8081' : 'https://telegram-chat-proxy-backend.herokuapp.com'
 
     useEffect(() => {
         toggleWidget()
@@ -17,7 +18,7 @@ function App() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: newMessage })
         };
-        fetch('http://localhost:8081/chat', requestOptions)
+        fetch(host + '/chat', requestOptions)
             .then(response => response.json())
             .then(data => {
                 console.log("response: " + JSON.stringify(data))
