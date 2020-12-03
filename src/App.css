@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.hidden {
+  display: none;
+}
+
+.rcw-conversation-container > .rcw-header {
+  background-color: #007bff !important;
+}
+
+.rcw-header span {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.clickButton {
+  margin: 2px;
+}
