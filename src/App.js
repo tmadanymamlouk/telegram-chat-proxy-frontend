@@ -77,7 +77,7 @@ function App() {
         <div className="App">
             <Widget
                 title="Amirs Chat Bot"
-                subtitle="Schreib ins Web und bekomme Antworten von der Telegram API"
+                subtitle=""
                 handleNewUserMessage={handleNewUserMessage}
                 fullScreenMode={false}
                 showCloseButton={false}
