@@ -11,7 +11,7 @@ import uuid from 'react-uuid'
 function App() {
     const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
 
-    const host = window.location.href.startsWith('http://localhost') ? 'http://localhost:5000' : 'https://flask-chat-backend.herokuapp.com'
+    const host = window.location.href
 
     useEffect(() => {
         toggleWidget()
